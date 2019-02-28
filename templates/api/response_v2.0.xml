@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response xmlns="urn:proforma:v2.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" {% if response.lang %}lang="{{response.lang }} }}"{% endif %}>
+    {% if response.seperate %}<separate-test-feedback>
+        <submission-feedback-list>
+        </submission-feedback-list>
+        <tests-response>
+            <test-response id="id1">
+                <test-result>
+                    <result>
+                        <score>1</score>
+                    </result>
+                    <feedback-list>
+                        <student-feedback level="debug">
+                            <title>Java - Compiler</title>
+                            <content format="plaintext"><![CDATA[<div>1 <tt>Java</tt> user-submitted files found for compilation:  HelloWorld.java &nbsp; </div>
+
+<div>The Java compiler produced no output</div>
+]]></content>
+                        </student-feedback>
+                    </feedback-list>
+                </test-result>
+            </test-response>
+            <test-response id="id2">
+                <test-result>
+                    <result >
+                        <score>1</score>
+                    </result>
+                    <feedback-list>
+                        <student-feedback level="debug">
+                            <title>JUnit Test: Java JUnit Test</title>
+                            <content format="plaintext"><![CDATA[<pre>
+
+======== Test Results ======
+
+</pre><br/><pre>JUnit version 4.10
+.
+Time: 0.003
+
+OK (1 test)
+
+</pre>]]></content>
+                        </student-feedback>
+                    </feedback-list>
+                </test-result>
+            </test-response>
+        </tests-response>
+    </separate-test-feedback>
+    {% endif %}
+    <files>
+    </files>
+    <response-meta-data>
+        <grader-engine name="Praktomat" version="version3"/>
+    </response-meta-data>
+</response>

@@ -1,0 +1,7 @@
+Django==2.0.7
+requests
+selenium
+svn
+pprint
+xmlschema
+logging
